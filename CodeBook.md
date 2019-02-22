@@ -1,6 +1,6 @@
 # Getting and Cleaning Data Course Project CodeBook
-######By: Paige Anderson
-######Last updated: 2/22/19
+###### By: Paige Anderson
+###### Last updated: 2/22/19
 
 &nbsp;
 
@@ -9,11 +9,11 @@ This CodeBook contains 2 sections:
 1. Variables - descriptions of identifier and measure variables
 2. Transformations - list of steps taken to create `tidyData.txt` from the source data
 
-##Variables
+## Variables
 
 Note that the first row of `tidyData.txt` contains the variable names, all of which will be described below.
 
-###Identifiers
+### Identifiers
 * `Subject` - identifies subject, integer ranging from 1-30
 * `ActivityDSC` - identifies activity performed, string with 6 possible values:
     * `WALKING`
@@ -23,7 +23,7 @@ Note that the first row of `tidyData.txt` contains the variable names, all of wh
     * `STANDING`
     * `LAYING`
     
-###Measures
+### Measures
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals TimeAcc-XYZ and TimeGyro-XYZ. These time domain signals were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (TimeBodyAcc-XYZ and TimeGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (TimeBodyAccJerk-XYZ and TimeBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (TimeBodyAccMag, TimeGravityAccMag, TimeBodyAccJerkMag, TimeBodyGyroMag, TimeBodyGyroJerkMag). 
@@ -33,7 +33,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-####Measure List
+#### Measure List
 * `TimeBodyAccMeanX`
 * `TimeBodyAccMeanY`
 * `TimeBodyAccMeanZ`
@@ -124,7 +124,7 @@ To prevent extremely long variable names, the longer words were abbreviated as f
 
 &nbsp;
 
-##Transformations
+## Transformations
 The zip file containing the source data is located [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 `run_analysis.R` performs the following transformations on the source data to create `tidyData.txt`:
